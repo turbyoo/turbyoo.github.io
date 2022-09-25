@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Edytor w WebGL</title>
+	<style>
+		body  {
+		  background-image: url("background.png");
+		  background-repeat: no-repeat;
+		  background-size: 100%; 
+		  color: white;
+		}
+	</style>
+  </head>
+  <body>
+    <div align="center">
+      <div><h1>Edytor w WebGl</h1>
+      </div>
+      <canvas width="700" height="400" id="glcanvas" style="border-style: solid; border-color: black;"></canvas>
+        <table width="400">
+          <tr>
+            <td>Czcionka</td>
+            <td><label id="fonts"> Ubuntu</label></td>
+          </tr>
+          <tr>
+            <td>Rozmiar czcionki</td>
+            <td><input id = "font_size" type="number" min="5" max="30" value="9"></input></td>
+          </tr>
+          <tr>
+            <td>Kolor czcionki</td>
+            <td><input id = "font_color" type="color" value="#1a1a1a"></input></td>
+          </tr>
+          <tr>
+            <td>Kolor tła</td>
+            <td><input id = "background_color" type="color" value="#b8e4f9"></input></td>
+          </tr>
+        </table>
+      <div><textarea cols="80" rows="9" id ="text"></textarea></div>
+    </div>
+    <script src="fonts/roboto.js"></script>
+    <script src="fonts/roboto-bold.js"></script>
+    <script src="fonts/dejavu-serif.js"></script>
+    <script src="fonts/dejavu-serif-italic.js"></script>
+    <script src="ubuntu.js"></script>
+    <script src="fonts/ubuntu-bold.js"></script>
+    <script src="main_functions.js"></script>
+    <script src="text_function.js"></script>
+    <script src="vshader.js"></script>
+    <script src="fshader.js"></script>
+    <script src="main.js"></script>
+    <script>
+      glMain();
+    </script>
+  </body>
+</html>
